@@ -515,8 +515,8 @@ if gen_spec:
 # =========================================
 pygame.init()
 displayInfo = pygame.display.Info()
-MAGNIFY = min(MAGNIFY,displayInfo.current_w*3/4/xsize)
-MAGNIFY = min(MAGNIFY,displayInfo.current_h*3/4/ysize)
+MAGNIFY = int(min(MAGNIFY,displayInfo.current_w*3/4/xsize))
+MAGNIFY = int(min(MAGNIFY,displayInfo.current_h*3/4/ysize))
 
 
 class Map(Environment):
